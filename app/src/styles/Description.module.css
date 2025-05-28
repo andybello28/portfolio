@@ -4,6 +4,7 @@
     align-items: center;
     justify-self: center;
     padding: 2rem;
+    padding-top: 0rem;
     padding-bottom: 0rem;
   }
 
@@ -25,8 +26,9 @@
       0 0 10px rgba(255, 255, 255, 0.1),
       0 0 20px rgba(255, 255, 255, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    order: 1;
     align-self: center;
+    order: 0;
+    margin-bottom: 1rem;
   }
 
   .about {
@@ -48,11 +50,11 @@
   }
 
   .small {
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-align: center;
-    padding-top: 0.5rem;
-    max-width: 400px;
-    line-height: 1.4;
+    padding-top: 1rem;
+    max-width: 600px;
+    line-height: 1.6;
     opacity: 0.85;
     margin: 0 auto;
   }

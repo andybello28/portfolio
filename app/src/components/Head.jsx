@@ -6,8 +6,8 @@ import style from "../styles/Head.module.css";
 export default function Head() {
     return (
         <div className={style.container}>
-            <Description/>
             <Links/>
+            <Description/>
         </div>
     );
 }
