@@ -15,5 +15,17 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    animation: fade-down 1.5s ease forwards;
   }
-  
+
+  @keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-6rem) scale(0.75);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}

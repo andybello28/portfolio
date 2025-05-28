@@ -1,29 +1,17 @@
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    justify-self: center;
     padding: 2rem;
-    animation: fade-right 1.5s ease forwards;
+    padding-bottom: 0rem;
   }
-
-  @keyframes fade-right {
-    0% {
-        opacity: 0;
-        transform: translateX(-30px) scale(0.75);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0px) scale(1);
-    }
-}
 
   .container2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 2rem;
   }
 
   .profileImage {
@@ -38,13 +26,13 @@
       0 0 20px rgba(255, 255, 255, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     order: 1;
+    align-self: center;
   }
 
   .about {
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 1rem;
     text-shadow:
       0 0 5px rgba(255, 255, 255, 0.2),
       0 0 10px rgba(255, 255, 255, 0.1),
@@ -52,10 +40,21 @@
     letter-spacing: 1px;
     opacity: 0.9;
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-  
-  .about span:hover {
-    transform: scale(1.05);
+
+  .small {
+    font-size: 0.95rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    max-width: 400px;
+    line-height: 1.4;
+    opacity: 0.85;
+    margin: 0 auto;
   }
 
   @keyframes waveAnimation {
@@ -78,8 +77,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
-    margin-top: 24px;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
   }
   
   .links a {

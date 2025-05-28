@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.links {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.2),
+      0 0 10px rgba(255, 255, 255, 0.1),
+      0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    padding-right: 1.5rem;
+  }
+  
+  .links:hover {
+    transform: scale(1.25);
+  }
