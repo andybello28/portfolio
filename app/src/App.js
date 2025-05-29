@@ -1,12 +1,10 @@
 import style from './styles/App.module.css';
-import Introduction from './components/Introduction';
-import Head from "./components/Head";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <div className={style.App}>
-      <Introduction/>
-      <Head/>
+      <Home/>
     </div>
   );
 }

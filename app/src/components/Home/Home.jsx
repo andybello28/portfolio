@@ -1,13 +1,15 @@
 import React from "react";
+import Header from "../Header/Header";
 import Description from "./Description";
-import Links from "./Links";
-import style from "../styles/Head.module.css";
+import Footer from "../Footer"
+import style from "../../styles/Home.module.css";
 
 export default function Head() {
     return (
         <div className={style.container}>
-            <Links/>
+            <Header/>
             <Description/>
+            <Footer/>
         </div>
     );
 }
