@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-self: flex-end;
-    animation: fade-down 1.5s ease forwards;
+    animation: fade-down .5s ease forwards;
 }
 
 @keyframes fade-down {
@@ -26,6 +26,24 @@
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.navbarClosed {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  animation: fade-up .5s ease forwards;
 }
 
 .buttonContainer {
@@ -70,23 +88,41 @@
 .closed {
   animation: close-animation .5s ease-in-out forwards;
 }
+
 .openedBackground {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   border: 1px solid rgba(0, 0, 0, 0.07);
-  animation: slide-background 2s ease;
+  animation: opened-background .5s ease;
 }
 
-@keyframes slide-background {
+@keyframes opened-background {
   from {
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 1.5;
   }
 }
+
+.closedBackground {
+  animation: closed-background .5s ease forwards;
+}
+
+@keyframes closed-background {
+  from {
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+  }
+  to {
+  }
+}
+
 @keyframes open-animation {
   from {
     opacity: .5;
