@@ -1,9 +1,9 @@
 import React from "react";
-import style from "../styles/Footer.module.css";
-import inImage from "../assets/LinkedIn.png";
-import githubImage from "../assets/Github.png";
-import resumeImage from "../assets/Cv.png";
-import resumeLink from "../assets/Resume.docx.pdf";
+import style from "../../styles/Footer/Footer.module.css";
+import inImage from "../../assets/LinkedIn.png";
+import githubImage from "../../assets/Github.png";
+import resumeImage from "../../assets/Cv.png";
+import resumeLink from "../../assets/Resume.docx.pdf";
 
 export default function Footer() {
     return (

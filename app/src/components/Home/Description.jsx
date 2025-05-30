@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../styles/Description.module.css";
+import style from "../../styles/Home/Description.module.css";
 import profileImage from "../../assets/Profile.jpg";
 
 export default function Description() {
