@@ -8,18 +8,17 @@ export default function Navbar() {
 
     const toggle = () => {
         if (!opened) {
-            setShowNavbar(true); // Show immediately when opening
+            setShowNavbar(true);
         }
-        setOpened(prev => !prev);
-        setNumOpened(prev => prev + 1);
+        setOpened(!opened);
+        setNumOpened(numOpened + 1);
     };
 
-    // Handle closing delay
     useEffect(() => {
         if (!opened && numOpened > 0) {
             const timer = setTimeout(() => {
-                setShowNavbar(false); // Hide after animation
-            }, 500); // match your animation duration
+                setShowNavbar(false);
+            }, 500);
             return () => clearTimeout(timer);
         }
     }, [opened, numOpened]);
