@@ -10,7 +10,8 @@ export default function Navbar() {
         console.log(opened);
     };
     return (
-        <div className={style.navContainer}>
+        <div className={style.container}>
+        <div className={`${style.navContainer} ${opened ? style.openedBackground : ''}`}>
             <div className={style.buttonContainer}>
                 <button onClick={toggle} className={`${style.button} ${numOpened !== 0 ? (opened ? style.opened : style.closed) : ''}`}>
                     { opened ? (
@@ -27,6 +28,7 @@ export default function Navbar() {
                     <a href="#" className={style.links}>Skills</a>
                     <a href="#" className={style.links}>Contact</a>
                 </div> ) : null }
+        </div>
         </div>
     );
 }

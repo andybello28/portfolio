@@ -1,14 +1,5 @@
 html {
-  background-image: linear-gradient(
-    to right,
-    #1b1b1b,
-    #262626,
-    #2f2f2f,
-    #262626,
-    #1b1b1b
-   );
-  background-size: cover;
-  background-color:#2f2f2f;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 body {
