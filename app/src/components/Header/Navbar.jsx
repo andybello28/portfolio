@@ -18,7 +18,7 @@ export default function Navbar() {
         if (!opened && numOpened > 0) {
             const timer = setTimeout(() => {
                 setShowNavbar(false);
-            }, 500);
+            }, 250);
             return () => clearTimeout(timer);
         }
     }, [opened, numOpened]);
