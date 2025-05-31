@@ -1,5 +1,5 @@
 .navContainer {
-  background: rgba(115, 115, 115, .75);
+  background: rgba(37.5, 37.5, 37.5, .90);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   width: 100%;
@@ -36,9 +36,13 @@
   display: block;
   height: 3px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.75);
+  background: white;
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.button:hover .line {
+  background-color: lightcoral;
 }
 
 .line1 {
@@ -125,4 +129,5 @@
   .links:hover {
     transform: scale(1.05);
     opacity: .85;
+    color: lightcoral;
   }

@@ -16,6 +16,10 @@
     transform: scale(1.1);
     opacity: 0.85;
   }
+
+  .links img:hover {
+    background-color: lightcoral;
+  }
   
   .links img {
     width: 40px;
