@@ -4,36 +4,31 @@ import style from "../../styles/Header/Navbar.module.css";
 export default function Navbar() {
     const [opened, setOpened] = useState(false);
     const [numOpened, setNumOpened] = useState(0);
-    const [showNavbar, setShowNavbar] = useState(false);
+    const [delayedOpened, setDelayedOpened] = useState(false);
 
     const toggle = () => {
-        if (!opened) {
-            setShowNavbar(true);
-        }
         setOpened(!opened);
         setNumOpened(numOpened + 1);
     };
 
     useEffect(() => {
-        if (!opened && numOpened > 0) {
-            const timer = setTimeout(() => {
-                setShowNavbar(false);
-            }, 250);
-            return () => clearTimeout(timer);
-        }
-    }, [opened, numOpened]);
+        const timer = setTimeout(() => {
+            setDelayedOpened(opened);
+        }, 200);
+
+        return () => clearTimeout(timer);
+    }, [opened]);
 
     return (
         <div className={`${style.navContainer} ${opened ? style.openedBackground : style.closedBackground}`}>
             <div className={style.buttonContainer}>
-                <button
-                    onClick={toggle}
-                    className={`${style.button} ${numOpened !== 0 ? (opened ? style.opened : style.closed) : ''}`}
-                >
-                    {opened ? <span>&#x2715;</span> : <span>☰</span>}
+                <button onClick={toggle} className={`${style.button} ${opened ? style.opened : ''}`}>
+                    <span className={style.line1}></span>
+                    <span className={style.line2}></span>
+                    <span className={style.line3}></span>
                 </button>
             </div>
-            {showNavbar && (
+            {delayedOpened && (
                 <div className={`${opened ? style.navbar : style.navbarClosed}`}>
                     <a href="#" className={style.links}>Home</a>
                     <a href="#" className={style.links}>Projects</a>

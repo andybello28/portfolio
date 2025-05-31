@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../styles/Header/Introduction.module.css";
+import style from "../../styles/Home/Introduction.module.css";
 
 export default function Introduction() {
     return (

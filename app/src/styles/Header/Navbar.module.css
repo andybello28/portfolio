@@ -1,38 +1,96 @@
 .navContainer {
-  background: rgba(116, 116, 116, 0.75);
+  background: rgba(115, 115, 115, .75);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   position: absolute;
+  top: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.button span {
+  display: block;
+  height: 3px;
   width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.line1 {
+  transform-origin: top left;
+}
+
+.line2 {
+  opacity: 1;
+}
+
+.line3 {
+  transform-origin: bottom left;
+}
+
+.opened .line1 {
+  transform: rotate(45deg) translate(3px, 0px);
+}
+
+.opened .line2 {
+  transition: .25s ease;
+  opacity: 0;
+}
+
+.opened .line3 {
+  transform: rotate(-45deg);
 }
 
 .navbar {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    animation: fade-down .5s ease forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  animation: navbarFadeIn 0.25s ease;
 }
 
-@keyframes fade-down {
+@keyframes navbarFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
-
   100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fade-up {
-  from {
     opacity: 1;
     transform: translateY(0);
   }
-  to {
+}
+
+@keyframes navbarFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
     opacity: 0;
     transform: translateY(-10px);
   }
@@ -41,92 +99,16 @@
 .navbarClosed {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
-  animation: fade-up .5s ease forwards;
-}
-
-.buttonContainer {
-  top: 0;
-  height: 3rem;
-  top: 0;
-  display: flex;
-  align-items: center;
   justify-content: flex-end;
-  padding-bottom: 1rem;
-}
-
-.button {
-  font-size: 1.5rem;
-  color: #ffffff;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  border-radius: 1rem;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  margin-right: 1rem;
-  margin-top: 1rem;
-  height: 2rem;
-  width: 2rem;
-}
-
-.opened span {
-  font-size: 1.2rem;
-  width: 1.2rem;
-  height: 1.5rem;
-}
-
-.button span:hover {
-  transform: scale(1.2);
-  opacity: .75;
-}
-
-.opened {
-  animation: open-animation .5s ease-in-out forwards;
-}
-
-.closed {
-  animation: close-animation .5s ease-in-out forwards;
-}
-
-.openedBackground {
-  animation: opened-background .5s ease;
-}
-
-@keyframes opened-background {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-
-@keyframes open-animation {
-  from {
-    opacity: .5;
-    transform: rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes close-animation {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+  padding-right: 1rem;
+  animation: navbarFadeOut 0.25s ease;
 }
 
 .links {
     color: #e0e0e0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
-    text-align: center;
+    text-align: end;
     letter-spacing: 2px;
     text-shadow:
       0 0 4px rgba(255, 255, 255, 0.2),
@@ -137,6 +119,7 @@
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     padding-bottom: 1rem;
+    padding-right: 1rem;
   }
   
   .links:hover {
